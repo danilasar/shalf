@@ -1,5 +1,5 @@
 [package]
-name = "browser-runtime"
+name = "browser-binding"
 version = "0.1.0"
 edition = "2021"
 
@@ -10,6 +10,7 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
+shalf-core = { path = "../shalf-core" }
 wasm-bindgen = "0.2.100"
 
 # The `console_error_panic_hook` crate provides better debugging of panics by

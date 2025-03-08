@@ -66,6 +66,17 @@ impl Imports {
     }
 }
 
+pub struct BrowserRuntime;
+
+impl shalf_core::Runtime for BrowserRuntime {
+    fn get_environment_name(&self) -> String {
+        "browser".into()
+    }
+    fn println(&self, s: &str) {
+        console_log!("{}", s);
+    }
+}
+
 #[wasm_bindgen]
 pub async fn load_and_add(url: &str, a: i32, b: i32) -> Result<i32, JsValue> {
     let opts = RequestInit::new();
@@ -106,5 +117,7 @@ pub async fn load_and_add(url: &str, a: i32, b: i32) -> Result<i32, JsValue> {
 
 #[wasm_bindgen(start)]
 pub fn main() {
+    shalf_core::main(BrowserRuntime);
+    shalf_core::hello_world();
     log("WASM Loaded!");
 }
