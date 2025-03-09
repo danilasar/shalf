@@ -1,9 +1,14 @@
 mod utils;
+mod dom;
+mod object_searcher;
 
 use wasm_bindgen::prelude::*;
 use js_sys::{Function, Map, Object, Promise, Reflect, Uint8Array, WebAssembly::{self, Module}};
 use web_sys::{Request, RequestInit, Response};
 use wasm_bindgen_futures::JsFuture;
+use std::sync::Mutex;
+
+static DOM: Mutex<dom::DOM> = Mutex::new(dom::DOM::new());
 
 #[wasm_bindgen]
 extern "C" {
