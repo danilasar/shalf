@@ -28,31 +28,31 @@ ruffle_frontend_utils = { path = "../frontend-utils", features = ["cpal"] }
 tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
 tracing-appender = "0.2.3"
-winit = "0.30.8"
-webbrowser = "1.0.3"
+winit = "0.30.11"
+webbrowser = "1.0.4"
 url = { workspace = true }
 dirs = "6.0"
 rfd = { workspace = true }
 anyhow = { workspace = true }
 bytemuck = { workspace = true }
 os_info = { version = "3", default-features = false }
-unic-langid = "0.9.5"
+unic-langid = "0.9.6"
 sys-locale = "0.3.2"
 wgpu = { workspace = true }
 futures = { workspace = true }
 chrono = { workspace = true }
 fluent-templates = "0.13.0"
-toml_edit = { version = "0.22.22", features = ["parse"] }
+toml_edit = { version = "0.22.26", features = ["parse"] }
 gilrs = "0.11"
 tokio = { workspace = true, features = ["rt-multi-thread", "macros", "fs"] }
 
 tracing-tracy = { version = "0.11.3", optional = true, features = ["demangle"] }
-rand = "0.8.5"
+rand = "0.9.1"
 thiserror.workspace = true
 async-channel.workspace = true
 
 [target.'cfg(target_os = "linux")'.dependencies]
-ashpd = "0.10.2"
+ashpd = "0.11.0"
 
 [target.'cfg(windows)'.dependencies]
 winapi = "0.3.9"
