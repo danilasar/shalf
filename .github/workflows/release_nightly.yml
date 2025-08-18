@@ -23,7 +23,7 @@ jobs:
     if: github.repository == 'ruffle-rs/ruffle' || github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Check for repo activity
         id: activity
@@ -105,7 +105,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Clone Ruffle repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -199,7 +199,7 @@ jobs:
       PACKAGE_FILE: ${{ needs.create-nightly-release.outputs.package_prefix }}-macos-universal.tar.gz
     steps:
       - name: Clone Ruffle repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download aarch64 binary
         uses: actions/download-artifact@v4
@@ -296,7 +296,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Clone Ruffle repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -329,7 +329,7 @@ jobs:
         demo: [false, true]
     steps:
       - name: Clone Ruffle repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -488,7 +488,7 @@ jobs:
 
       - name: Clone web demo
         if: matrix.demo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ruffle-rs/demo
           path: demo
@@ -526,7 +526,7 @@ jobs:
 
       - name: Clone JS docs
         if: ${{ !matrix.demo }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ruffle-rs/js-docs
           path: js-docs
@@ -565,7 +565,7 @@ jobs:
     runs-on: ubuntu-24.04
     if: github.repository == 'ruffle-rs/ruffle'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Get current time with dashes
         uses: 1466587594/get-current-time@v2.1.2

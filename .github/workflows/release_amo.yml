@@ -27,7 +27,7 @@ jobs:
         # NOTE: The hyphens in the date are replaced with underscores.
         run: gh release list -L1 | awk '{ print "tag="$4; gsub(/-/, "_"); print "date="$2; }' >> "$GITHUB_OUTPUT"
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ steps.release_info.outputs.tag }}
 
