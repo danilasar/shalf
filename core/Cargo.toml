@@ -18,7 +18,7 @@ flate2 = { workspace = true }
 fnv = "1.0.7"
 gc-arena = { package = "ruffle_gc_arena", path = "../ruffle_gc_arena" }
 slotmap = { workspace = true }
-indexmap = "2.8.0"
+indexmap = "2.11.0"
 tracing = { workspace = true }
 ruffle_render = { path = "../render", features = ["tessellator"] }
 ruffle_video = { path = "../video" }
@@ -26,19 +26,19 @@ ruffle_macros = { path = "macros" }
 ruffle_wstr = { path = "../wstr" }
 swf = { path = "../swf" }
 bitflags = { workspace = true }
-smallvec = { version = "1.14.0", features = ["union"] }
+smallvec = { version = "1.15.1", features = ["union"] }
 num-traits = { workspace = true }
 num-derive = { workspace = true }
-quick-xml = "0.37.3"
-downcast-rs = "2.0.1"
+quick-xml = "0.38.3"
+downcast-rs = "2.0.2"
 url = { workspace = true }
 weak-table = "0.3.2"
-percent-encoding = "2.3.1"
+percent-encoding = "2.3.2"
 thiserror = { workspace = true }
 chrono = { workspace = true, features = ["clock"] }
 web-time = "1.1.0"
 encoding_rs = "0.8.35"
-rand = { version = "0.8.5", features = ["std", "small_rng"], default-features = false }
+rand = { version = "0.9.2", features = ["std", "small_rng"], default-features = false }
 serde = { workspace = true }
 serde_json = { version = "1.0", features = ["preserve_order"] }
 nellymoser-rs = { git = "https://github.com/ruffle-rs/nellymoser", rev = "754b1184037aa9952a907107284fb73897e26adc", optional = true }
@@ -47,16 +47,16 @@ flash-lso = { git = "https://github.com/ruffle-rs/rust-flash-lso", rev = "a5e938
 lzma-rs = {version = "0.3.0", optional = true }
 dasp = { version = "0.11.0", features = ["interpolate", "interpolate-linear", "signal"], optional = true }
 symphonia = { version = "0.5.4", default-features = false, optional = true }
-enumset = "1.1.5"
+enumset = "1.1.10"
 bytemuck = { workspace = true }
 clap = { workspace = true, optional=true }
-realfft = "3.4.0"
+realfft = "3.5.0"
 hashbrown = { version = "0.14.5", features = ["raw"] }
 scopeguard = "1.2.0"
-fluent-templates = "0.13.0"
+fluent-templates = "0.13.1"
 egui = { workspace = true, optional = true }
-egui_extras = { version = "0.31.1", default-features = false, optional = true }
-png = { version = "0.17.16", optional = true }
+egui_extras = { version = "0.32.2", default-features = false, optional = true }
+png = { version = "0.18.0", optional = true }
 flv-rs = { path = "../flv" }
 async-channel = { workspace = true }
 jpegxr = { git = "https://github.com/ruffle-rs/jpegxr", rev = "2a429b0d71ab416e10b73d4dbdcf34cfe2900395", optional = true }
@@ -65,10 +65,10 @@ enum-map = { workspace = true }
 ttf-parser = "0.25"
 num-bigint = "0.4"
 unic-segment = "0.9.0"
-id3 = "1.16.1"
+id3 = "1.16.3"
 either = "1.15.0"
 chardetng = "0.1.17"
-tracy-client = { version = "0.17.6", optional = true, default-features = false }
+tracy-client = { version = "0.18.2", optional = true, default-features = false }
 
 [target.'cfg(not(target_family = "wasm"))'.dependencies.futures]
 workspace = true
