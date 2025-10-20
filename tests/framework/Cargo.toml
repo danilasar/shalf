@@ -18,7 +18,7 @@ ruffle_socket_format = { path = "../socket-format" }
 ruffle_video_software = { path = "../../video/software", optional = true }
 ruffle_video_external = { path = "../../video/external", features = ["openh264"], optional = true }
 image = { workspace = true, features  = ["png"] }
-regex = "1.11.1"
+regex = "1.12.2"
 url = { workspace = true }
 chrono = { workspace = true }
 approx = "0.5.1"
@@ -28,7 +28,7 @@ toml = "0.8.16"
 anyhow = { workspace = true }
 async-channel = { workspace = true }
 vfs = "0.12.1"
-percent-encoding = "2.3.1"
+percent-encoding = "2.3.2"
 
 [features]
 jpegxr = ["ruffle_core/jpegxr"]
