@@ -112,7 +112,7 @@ jobs:
 
       - name: Upload images
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: swf_images_${{ matrix.rust_version }}_${{ matrix.os }}
           path: |
