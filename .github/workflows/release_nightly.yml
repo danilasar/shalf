@@ -183,7 +183,7 @@ jobs:
 
       - name: Upload macOS build artifact
         if: runner.os == 'macOS'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ matrix.build_name }}
           path: |
@@ -443,7 +443,7 @@ jobs:
 
       - name: Upload Safari build artifact
         if: ${{ !matrix.demo }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: macos-safari
           path: ./web/packages/extension/dist/ruffle_extension.zip
