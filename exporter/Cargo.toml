@@ -18,7 +18,7 @@ ruffle_render_wgpu = { path = "../render/wgpu", features = ["clap"] }
 image = { workspace = true, features = ["png"] }
 walkdir = { workspace = true }
 indicatif = "0.17"
-rayon = "1.10.0"
+rayon = "1.11.0"
 anyhow = { workspace = true }
 
 [features]
