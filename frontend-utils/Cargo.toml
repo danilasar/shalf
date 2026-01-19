@@ -24,8 +24,8 @@ ruffle_core = { path = "../core", default-features = false }
 ruffle_render = { path = "../render", default-features = false }
 async-channel = { workspace = true }
 slotmap = { workspace = true }
-async-io = "2.4.0"
-futures-lite = "2.6.0"
+async-io = "2.6.0"
+futures-lite = "2.6.1"
 reqwest = { version = "0.12.12", default-features = false, features = [
     "rustls-tls",
     "cookies",
@@ -40,4 +40,4 @@ bytemuck = { workspace = true, optional = true }
 [dev-dependencies]
 tempfile = "3"
 tokio = { workspace = true, features = ["macros", "rt"] }
-macro_rules_attribute = "0.2.0"
+macro_rules_attribute = "0.2.2"
